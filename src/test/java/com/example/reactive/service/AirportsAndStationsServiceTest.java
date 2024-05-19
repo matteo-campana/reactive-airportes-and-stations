@@ -1,52 +1,99 @@
 package com.example.reactive.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.springframework.core.io.ClassPathResource;
+
+import com.example.reactive.model.Airport;
+import com.example.reactive.model.Station;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class AirportsAndStationsServiceTest {
-    private AirportsAndStationsService service;
+
+    private AirportsAndStationsService airportsAndStationsService;
+
+    private ObjectMapper objectMapper;
 
     @BeforeEach
     void setUp() {
-        service = Mockito.mock(AirportsAndStationsService.class);
+        airportsAndStationsService = new AirportsAndStationsService();
+        objectMapper = new ObjectMapper();
     }
 
     @Test
-    void testGetClosestByAirports() {
-        // Airport airport = new
-        // Airport().builder().name("JFK").latitude(40.6413).longitude(-73.7781).build();
-        // when(service.GetClosestByAirports("JFK",
-        // 10.0)).thenReturn(Arrays.asList(airport, airport));
+    void testGetClosestByAirports() throws IOException {
+        String stationId = "KORD";
+        double closestBy = 0.5;
 
-        // List<Airport> result = service.GetClosestByAirports("JFK", 10.0);
-        // assertNotNull(result);
-        // assertEquals(2, result.size());
+        String jsonResponse = new String(
+                Files.readAllBytes(Paths.get(
+                        new ClassPathResource("airports-response-KORD-0.1.json").getURI())));
 
-        assertEquals(true, true);
+        List<Airport> expectedAirports = Arrays.asList(objectMapper.readValue(jsonResponse, Airport[].class));
+
+        // Mockito.when(airportsAndStationsService.GetClosestByAirports(stationId,
+        // closestBy))
+        // .thenReturn(expectedAirports);
+
+        List<Airport> actualAirports = airportsAndStationsService.GetClosestByAirports(stationId, closestBy);
+
+        assertEquals(expectedAirports, actualAirports);
     }
 
     @Test
-    void testGetClosestByAirportsWithNullAirport() {
+    void testGetClosestByAirportsWithNullStation() throws UnsupportedEncodingException {
+        String stationId = null;
+        double closestBy = 0.5;
 
-        assertEquals(true, true);
+        // Mockito.when(airportsAndStationsService.GetClosestByAirports(stationId,
+        // closestBy))
+        // .thenThrow(new IllegalArgumentException("Station ID cannot be null"));
+
+        List<Airport> actualAirports = airportsAndStationsService.GetClosestByAirports(stationId, closestBy);
+
+        List<Airport> expectedAirports = Arrays.asList();
+
+        assertEquals(expectedAirports, actualAirports);
     }
 
     @Test
-    void testGetClosestByStations() {
+    void testGetClosestByStations() throws IOException {
+        String airportId = "KMCI";
+        double closestBy = 0.5;
 
-        // List<Station> result = service.GetClosestByStations(null, 10.0);
-        // assertNotNull(result);
-        // assertEquals(2, result.size());
-        assertEquals(true, true);
+        String jsonResponse = new String(
+                Files.readAllBytes(Paths.get(
+                        new ClassPathResource("stations-response-KMCI-0.1.json").getURI())));
+
+        List<Station> expectedStations = Arrays.asList(objectMapper.readValue(jsonResponse, Station[].class));
+
+        // Mockito.when(airportsAndStationsService.GetClosestByStations(airportId,
+        // closestBy))
+        // .thenReturn(expectedStations);
+
+        List<Station> actualStations = airportsAndStationsService.GetClosestByStations(airportId, closestBy);
+
+        assertEquals(expectedStations, actualStations);
     }
 
     @Test
-    void testGetClosestByStationsWithNullStation() {
+    void testGetClosestByStationsWithNullAirport() throws UnsupportedEncodingException {
+        String airportId = null;
+        double closestBy = 0.5;
 
-        assertEquals(true, true);
+        List<Station> actualAirports = airportsAndStationsService.GetClosestByStations(airportId, closestBy);
+
+        List<Airport> expectedAirports = Arrays.asList();
+
+        assertEquals(expectedAirports, actualAirports);
     }
 }

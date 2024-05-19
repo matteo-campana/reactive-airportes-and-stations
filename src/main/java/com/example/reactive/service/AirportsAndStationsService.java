@@ -1,8 +1,6 @@
 package com.example.reactive.service;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,10 +38,14 @@ public class AirportsAndStationsService {
 
         // logger.debug("Airport ID : " + airportId);
 
+        if (airportId == null) {
+            return List.of();
+        }
+
         Airport airportReference = GetAirportById(airportId);
 
         if (airportReference == null) {
-            throw new IllegalArgumentException("Airport not found");
+            return List.of();
         }
 
         // logger.debug("calling GetBoundingBox...");
@@ -71,7 +73,8 @@ public class AirportsAndStationsService {
     public List<Station> GetClosestByStations(String stationId, double closestBy) throws UnsupportedEncodingException {
 
         if (stationId == null) {
-            throw new IllegalArgumentException("Station ID is required");
+            return List.of();
+            // throw new IllegalArgumentException("Station ID is required");
         }
 
         // logger.debug("Station ID : " + stationId);
