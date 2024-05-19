@@ -11,13 +11,6 @@ This project is a REST API providing an endpoint to retrieve closest observation
 - **Java 22**
 - **Apache Maven 3.9.6**
 - **Redis Stack** running on localhost:6379 (default configuration) (Docker is recommended)
-- 
-## Test
-
-- In order to test remember to start the Redis Stack server
-- a Postman collection is provided at the following path:
-  
-  ```http\Task 2.postman_collection.json```
 
 ### Redis docker image configuration
 
@@ -26,6 +19,13 @@ This project is a REST API providing an endpoint to retrieve closest observation
 ```shell
 $ docker run -d --name my-redis-stack -p 6379:6379  redis/redis-stack-server:latest
 ```
+
+## Test
+
+- In order to test remember to start the Redis Stack server
+- a Postman collection is provided at the following path:
+  
+  ```http\Task 2.postman_collection.json```
 
 ---
 
