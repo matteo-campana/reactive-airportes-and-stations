@@ -1,72 +1,65 @@
 package com.example.reactive.controller;
 
-import static org.mockito.ArgumentMatchers.anyDouble;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.reactive.server.WebTestClient.bindToController;
-
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
-import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import com.example.reactive.model.Airport;
 import com.example.reactive.model.Station;
 import com.example.reactive.service.AirportsAndStationsService;
 
-import reactor.core.publisher.Flux;
+import reactor.test.StepVerifier;
 
+@ExtendWith(MockitoExtension.class)
 public class AirportsAndStationsControllerTest {
 
-        @Mock
+        // @Mock
         private AirportsAndStationsService airportsAndStationsService;
 
-        @InjectMocks
+        // @InjectMocks
         private AirportsAndStationsController airportsAndStationsController;
 
-        private WebTestClient webTestClient;
+        WebTestClient webTestClient;
 
         @BeforeEach
         public void setUp() {
-                MockitoAnnotations.openMocks(this);
-                webTestClient = bindToController(airportsAndStationsController).build();
+                airportsAndStationsService = Mockito.mock(AirportsAndStationsService.class);
+                airportsAndStationsController = new AirportsAndStationsController(airportsAndStationsService);
+                // webTestClient =
+                // WebTestClient.bindToController(airportsAndStationsController).build();
         }
 
         @Test
         public void testGetStations() throws UnsupportedEncodingException {
-                String airportId = "KAFF";
-                double closestBy = 0.0;
-                List<Station> stations = Arrays.asList();
 
-                when(airportsAndStationsService.GetClosestByStations(anyString(), anyDouble())).thenReturn(stations);
+                Mockito.when(airportsAndStationsService.GetClosestByStations(Mockito.anyString(), Mockito.anyDouble()))
+                                .thenReturn(Arrays.asList(new Station(
+                                                "KAFF", "Air Force Academy Arfld", "CO", "US", 38.971, -104.816,
+                                                2003)));
 
-                webTestClient.get()
-                                .uri("/api/fabrick/v1.0/airports/{airportId}/stations?closestBy={closestBy}", airportId,
-                                                closestBy)
-                                .exchange()
-                                .expectStatus().isOk()
-                                .expectBodyList(Station.class).isEqualTo(stations);
+                StepVerifier.create(airportsAndStationsController.GetStations("KAFF", 0.0))
+                                .expectNextMatches(st -> st.getId().equals("KAFF"))
+                                .verifyComplete();
+
         }
 
         @Test
         public void testGetAirports() throws UnsupportedEncodingException {
-                String stationId = "KDEN";
-                double closestBy = 0.0;
-                List<Airport> airports = Arrays.asList();
 
-                when(airportsAndStationsService.GetClosestByAirports(anyString(), anyDouble())).thenReturn(airports);
+                Mockito.when(airportsAndStationsService.GetClosestByAirports(Mockito.anyString(), Mockito.anyDouble()))
+                                .thenReturn(Arrays.asList(new Airport(
 
-                webTestClient.get()
-                                .uri("/api/fabrick/v1.0/stations/{stationId}/airports?closestBy={closestBy}", stationId,
-                                                closestBy)
-                                .exchange()
-                                .expectStatus().isOk()
-                                .expectBodyList(Airport.class).isEqualTo(airports);
+                                                "KAFF", "Air Force Academy Arfld", "CO", "US", 38.971, -104.816,
+                                                2003)));
+
+                StepVerifier.create(airportsAndStationsController.GetAirports("KAFF", 0.0))
+                                .expectNextMatches(st -> st.getId().equals("KAFF"))
+                                .verifyComplete();
         }
 }

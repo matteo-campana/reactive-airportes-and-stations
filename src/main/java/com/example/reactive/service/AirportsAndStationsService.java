@@ -17,22 +17,22 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @AllArgsConstructor
 @Service
 public class AirportsAndStationsService {
 
-    private RestTemplate restTemplate;
     private final String stationsUrl = "https://aviationweather.gov/api/data/stationinfo";
     private final String airportUrl = "https://aviationweather.gov/api/data/airport";
-    private ObjectMapper objectMapper;
 
     Logger logger = LoggerFactory.getLogger(AirportsAndStationsService.class);
 
-    public AirportsAndStationsService() {
-        this.restTemplate = new RestTemplate();
-        this.objectMapper = new ObjectMapper();
-    }
+    // public AirportsAndStationsService() {
+    // this.restTemplate = new RestTemplate();
+    // this.objectMapper = new ObjectMapper();
+    // }
 
     public List<Airport> GetClosestByAirports(String airportId, double closestBy) throws UnsupportedEncodingException {
 
@@ -109,6 +109,9 @@ public class AirportsAndStationsService {
 
     private Airport GetAirportById(String airportId) {
 
+        RestTemplate restTemplate = new RestTemplate();
+        ObjectMapper objectMapper = new ObjectMapper();
+
         // example of a call to the aviationweather API
         // curl -X 'GET' \
         // 'https://aviationweather.gov/api/data/airport?ids=KMCI%2CKORD%2CKBOS&bbox=100%2C-100%2C100%2C-100&format=json'
@@ -158,6 +161,9 @@ public class AirportsAndStationsService {
     }
 
     private Station GetStationById(String stationId) {
+
+        RestTemplate restTemplate = new RestTemplate();
+        ObjectMapper objectMapper = new ObjectMapper();
 
         if (stationId == null) {
             throw new IllegalArgumentException("Station ID is required");
@@ -214,6 +220,9 @@ public class AirportsAndStationsService {
     }
 
     private List<Airport> GetAirportsByGeographicBoundingBox(GeographicBoundingBox geographicBoundingBox) {
+
+        RestTemplate restTemplate = new RestTemplate();
+        ObjectMapper objectMapper = new ObjectMapper();
 
         // example of a call to the aviationweather API
         // curl -X 'GET' \
@@ -308,6 +317,9 @@ public class AirportsAndStationsService {
     }
 
     private List<Station> GetStationsByGeographicBoundingBox(GeographicBoundingBox geographicBoundingBox) {
+
+        RestTemplate restTemplate = new RestTemplate();
+        ObjectMapper objectMapper = new ObjectMapper();
 
         // curl -X 'GET' \
         // 'https://aviationweather.gov/api/data/stationinfo?bbox=40%2C-90%2C45%2C-85&format=json'

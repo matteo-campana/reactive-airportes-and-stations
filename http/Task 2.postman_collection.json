@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "3811fe39-171f-4729-994e-921c3a6abeab",
+		"name": "Task 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35000935"
+	},
+	"item": [
+		{
+			"name": "Get closestes stations from airport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/fabrick/v1.0/airports/KMCI/stations?closestBy=0.5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fabrick",
+						"v1.0",
+						"airports",
+						"KMCI",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "closestBy",
+							"value": "0.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get closestes airports from station",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/fabrick/v1.0/stations/KORD/airports?closestBy=0.5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fabrick",
+						"v1.0",
+						"stations",
+						"KORD",
+						"airports"
+					],
+					"query": [
+						{
+							"key": "closestBy",
+							"value": "0.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aviationweather get stations with bbox",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://aviationweather.gov/api/data/stationinfo?bbox=31.9769,-97.9081,51.9769,-77.9081&format=json",
+					"protocol": "https",
+					"host": [
+						"aviationweather",
+						"gov"
+					],
+					"path": [
+						"api",
+						"data",
+						"stationinfo"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "31.9769,-97.9081,51.9769,-77.9081"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aviationweather get stationinfo with bbox ERROR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://aviationweather.gov/api/data/stationinfo?bbox=31.9769%252C-97.9081%252C51.9769%252C-77.9081&format=json",
+					"protocol": "https",
+					"host": [
+						"aviationweather",
+						"gov"
+					],
+					"path": [
+						"api",
+						"data",
+						"stationinfo"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "31.9769%252C-97.9081%252C51.9769%252C-77.9081"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aviationweather get airports with bbox",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://aviationweather.gov/api/data/airport?bbox=40%2C-90%2C45%2C-85&format=json",
+					"protocol": "https",
+					"host": [
+						"aviationweather",
+						"gov"
+					],
+					"path": [
+						"api",
+						"data",
+						"airport"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KMCI",
+							"disabled": true
+						},
+						{
+							"key": "bbox",
+							"value": "40%2C-90%2C45%2C-85"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
