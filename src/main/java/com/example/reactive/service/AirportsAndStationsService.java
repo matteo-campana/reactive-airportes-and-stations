@@ -1,5 +1,8 @@
 package com.example.reactive.service;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,9 +36,9 @@ public class AirportsAndStationsService {
         this.objectMapper = new ObjectMapper();
     }
 
-    public List<Airport> GetClosestByAirports(String airportId, double closestBy) {
+    public List<Airport> GetClosestByAirports(String airportId, double closestBy) throws UnsupportedEncodingException {
 
-        logger.debug("Airport ID : " + airportId);
+        // logger.debug("Airport ID : " + airportId);
 
         Airport airportReference = GetAirportById(airportId);
 
@@ -43,34 +46,35 @@ public class AirportsAndStationsService {
             throw new IllegalArgumentException("Airport not found");
         }
 
-        logger.debug("calling GetBoundingBox...");
+        // logger.debug("calling GetBoundingBox...");
 
         GeographicBoundingBox geographicBoundingBox = GetBoundingBox(airportReference.getLatitude(),
                 airportReference.getLongitude(), closestBy);
 
-        logger.debug(GeographicBoundingBox.class.getName() + " : " + geographicBoundingBox.toString());
+        // logger.debug(GeographicBoundingBox.class.getName() + " : " +
+        // geographicBoundingBox.toString());
 
-        logger.debug("calling GetAirportsByGeographicBoundingBox...");
+        // logger.debug("calling GetAirportsByGeographicBoundingBox...");
 
         List<Airport> result = GetAirportsByGeographicBoundingBox(geographicBoundingBox);
 
         if (result == null) {
-            logger.debug("result is null");
+            // logger.debug("result is null");
             return List.of();
         }
 
-        logger.debug("result count: " + result.size());
+        // logger.debug("result count: " + result.size());
 
         return result;
     }
 
-    public List<Station> GetClosestByStations(String stationId, double closestBy) {
+    public List<Station> GetClosestByStations(String stationId, double closestBy) throws UnsupportedEncodingException {
 
         if (stationId == null) {
             throw new IllegalArgumentException("Station ID is required");
         }
 
-        logger.debug("Station ID : " + stationId);
+        // logger.debug("Station ID : " + stationId);
 
         Station stationReference = GetStationById(stationId);
 
@@ -79,22 +83,23 @@ public class AirportsAndStationsService {
             throw new IllegalArgumentException("Station not found");
         }
 
-        logger.debug("calling GetBoundingBox...");
+        // logger.debug("calling GetBoundingBox...");
         GeographicBoundingBox geographicBoundingBox = GetBoundingBox(stationReference.getLatitude(),
                 stationReference.getLongitude(), closestBy);
 
-        logger.debug(GeographicBoundingBox.class.getName() + " : " + geographicBoundingBox.toString());
+        // logger.debug(GeographicBoundingBox.class.getName() + " : " +
+        // geographicBoundingBox.toString());
 
-        logger.debug("calling GetStationsByGeographicBoundingBox...");
+        // logger.debug("calling GetStationsByGeographicBoundingBox...");
 
         List<Station> result = GetStationsByGeographicBoundingBox(geographicBoundingBox);
 
         if (result == null) {
-            logger.debug("result is null");
+            // logger.debug("result is null");
             return List.of();
         }
 
-        logger.debug("result count: " + result.size());
+        // logger.debug("result count: " + result.size());
 
         return result;
     }
@@ -183,7 +188,7 @@ public class AirportsAndStationsService {
                 return null;
             }
 
-            logger.debug("responseJson size: " + responseJson);
+            // logger.debug("responseJson size: " + responseJson);
 
             for (JsonNode node : responseJson) {
                 Station station = Station.builder()
@@ -200,7 +205,7 @@ public class AirportsAndStationsService {
 
         }
 
-        logger.debug("responseJson is not an array");
+        // logger.debug("responseJson is not an array");
 
         return null;
     }
@@ -213,13 +218,15 @@ public class AirportsAndStationsService {
         // \
         // -H 'accept: */*'
 
-        String url = UriComponentsBuilder.fromHttpUrl(stationsUrl)
+        String url = UriComponentsBuilder.fromHttpUrl(airportUrl)
                 .queryParam("bbox", geographicBoundingBox.getLat0() + ","
                         + geographicBoundingBox.getLon0() + "," + geographicBoundingBox.getLat1() + ","
                         + geographicBoundingBox.getLon1())
                 .queryParam("format", "json").toUriString();
 
-        logger.debug("url: " + url);
+        System.out.println("### URL: " + url);
+
+        // logger.debug("url: " + url);
 
         String response = restTemplate.getForObject(url, String.class);
 
@@ -241,7 +248,7 @@ public class AirportsAndStationsService {
                 return null;
             }
 
-            logger.debug("responseJson size: " + responseJson);
+            // logger.debug("responseJson size: " + responseJson);
 
             // {
             // "icaoId": "41029",
@@ -257,7 +264,10 @@ public class AirportsAndStationsService {
             // "priority": 8
             // },
 
-            List<Airport> airports = new ArrayList<>();
+            // logger.debug("responseJson size: " + responseJson.size());
+            // logger.debug("URL: " + url);
+
+            List<Airport> airports = new ArrayList<Airport>();
 
             for (JsonNode node : responseJson) {
                 String id = node.has("id") ? node.get("id").asText() : null;
@@ -277,14 +287,18 @@ public class AirportsAndStationsService {
                         .longitude(longitude)
                         .elevation(elevation)
                         .build();
-                airports.add(airport);
+
+                if (airport != null && IsWithinBoundingBox(airport.getLatitude(), airport.getLongitude(),
+                        geographicBoundingBox)) {
+                    airports.add(airport);
+                }
             }
 
             return airports;
 
         }
 
-        logger.debug("responseJson is not an array");
+        // logger.debug("responseJson is not an array");
 
         return null;
 
@@ -302,6 +316,7 @@ public class AirportsAndStationsService {
                         + geographicBoundingBox.getLon0() + "," + geographicBoundingBox.getLat1() + ","
                         + geographicBoundingBox.getLon1())
                 .queryParam("format", "json").toUriString();
+        System.out.println("### URL: " + url);
 
         String response = restTemplate.getForObject(url, String.class);
 
@@ -321,7 +336,7 @@ public class AirportsAndStationsService {
                 return null;
             }
 
-            List<Station> stations = new ArrayList<>();
+            List<Station> stations = new ArrayList<Station>();
 
             for (JsonNode node : responseJson) {
                 Station station = Station.builder()
@@ -333,7 +348,12 @@ public class AirportsAndStationsService {
                         .longitude(node.has("lon") ? node.get("lon").asDouble() : null)
                         .elevation(node.has("elev") ? node.get("elev").asDouble() : null)
                         .build();
-                stations.add(station);
+
+                if (station != null
+                        && IsWithinBoundingBox(station.getLatitude(), station.getLongitude(), geographicBoundingBox)) {
+                    stations.add(station);
+                }
+
             }
 
             return stations;
@@ -359,7 +379,6 @@ public class AirportsAndStationsService {
 
     }
 
-    @SuppressWarnings("unused")
     private boolean IsWithinBoundingBox(double latitude, double longitude,
             GeographicBoundingBox geographicBoundingBox) {
 

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "KEAX",
+    "site": "Kansas City/NEXRAD",
+    "state": "MO",
+    "country": "US",
+    "latitude": 38.81,
+    "longitude": -94.264,
+    "elevation": 305.0
+  },
+  {
+    "id": "KEZZ",
+    "site": "Cameron Arpt",
+    "state": "MO",
+    "country": "US",
+    "latitude": 39.729,
+    "longitude": -94.2785,
+    "elevation": 317.0
+  },
+  {
+    "id": "KFLV",
+    "site": "Ft Leavenworth/Sherman AAF",
+    "state": "KS",
+    "country": "US",
+    "latitude": 39.369,
+    "longitude": -94.913,
+    "elevation": 234.0
+  },
+  {
+    "id": "KGPH",
+    "site": "Mosby/Midwest Air Center",
+    "state": "MO",
+    "country": "US",
+    "latitude": 39.3248,
+    "longitude": -94.3082,
+    "elevation": 233.0
+  },
+  {
+    "id": "KIXD",
+    "site": "Olathe/New Century Arpt",
+    "state": "KS",
+    "country": "US",
+    "latitude": 38.8221,
+    "longitude": -94.8902,
+    "elevation": 322.0
+  },
+  {
+    "id": "KLWC",
+    "site": "Lawrence Muni",
+    "state": "KS",
+    "country": "US",
+    "latitude": 39.0078,
+    "longitude": -95.2115,
+    "elevation": 252.0
+  },
+  {
+    "id": "KLXT",
+    "site": "Lee's Summit Muni",
+    "state": "MO",
+    "country": "US",
+    "latitude": 38.9577,
+    "longitude": -94.3712,
+    "elevation": 306.0
+  },
+  {
+    "id": "KMCI",
+    "site": "Kansas City Intl",
+    "state": "MO",
+    "country": "US",
+    "latitude": 39.2975,
+    "longitude": -94.7309,
+    "elevation": 308.0
+  },
+  {
+    "id": "KMKC",
+    "site": "Kansas City/Wheeler Downtown Arpt",
+    "state": "MO",
+    "country": "US",
+    "latitude": 39.1279,
+    "longitude": -94.5892,
+    "elevation": 228.0
+  },
+  {
+    "id": "KOJC",
+    "site": "Olathe/Johnson Cnty",
+    "state": "KS",
+    "country": "US",
+    "latitude": 38.85,
+    "longitude": -94.7395,
+    "elevation": 328.0
+  },
+  {
+    "id": "KSTJ",
+    "site": "St Joseph/Rosecrans Mem",
+    "state": "MO",
+    "country": "US",
+    "latitude": 39.7683,
+    "longitude": -94.9095,
+    "elevation": 247.0
+  }
+]

@@ -1,5 +1,6 @@
 package com.example.reactive.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -46,8 +47,9 @@ public class AirportsAndStationsController {
 
     @Cacheable(value = "stations", key = "#airportId + #closestBy", unless = "#result.size() == 0")
     @GetMapping(value = "/airports/{airportId}/stations", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Flux<Station> getStations(@PathVariable String airportId,
-            @RequestParam(required = false, defaultValue = "0.0") double closestBy) {
+    public Flux<Station> GetStations(@PathVariable String airportId,
+            @RequestParam(required = false, defaultValue = "0.0") double closestBy)
+            throws UnsupportedEncodingException {
 
         logger.info("Requesting stations for airportId: " + airportId + " closestBy: " + closestBy);
 
@@ -55,7 +57,10 @@ public class AirportsAndStationsController {
 
         logger.info("Returning " + stations.size() + " stations");
 
-        return Flux.fromIterable(stations);
+        // return Flux.fromIterable(stations);
+
+        return Flux.fromIterable(stations)
+                .flatMap(Flux::just);
     }
 
     // GET /api/fabrick/v1.0/stations/{stationId}/airports?closestBy={value?0.0}
@@ -75,7 +80,8 @@ public class AirportsAndStationsController {
     @Cacheable(value = "airports", key = "#stationId + #closestBy", unless = "#result.size() == 0")
     @GetMapping(value = "/stations/{stationId}/airports", produces = MediaType.APPLICATION_JSON_VALUE)
     public Flux<Airport> GetAirports(@PathVariable String stationId,
-            @RequestParam(required = false, defaultValue = "0.0") double closestBy) {
+            @RequestParam(required = false, defaultValue = "0.0") double closestBy)
+            throws UnsupportedEncodingException {
 
         logger.info("Requesting airports for stationId: " + stationId + " closestBy: " + closestBy);
 
@@ -83,7 +89,10 @@ public class AirportsAndStationsController {
 
         logger.info("Returning " + airports.size() + " airports");
 
-        return Flux.fromIterable(airports);
+        // return Flux.fromIterable(airports);
+
+        return Flux.fromIterable(airports)
+                .flatMap(Flux::just);
 
     }
 

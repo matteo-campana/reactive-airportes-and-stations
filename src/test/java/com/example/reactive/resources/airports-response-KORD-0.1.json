@@ -1,0 +1,920 @@
+[
+  {
+    "id": "-",
+    "name": "ALSIP/ALSIP_FIRE_DEPARTMENT",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.675,
+    "longitude": -87.7495,
+    "elevation": 189.9
+  },
+  {
+    "id": "-",
+    "name": "ANTIOCH/DONALD_ALFRED_GADE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.4653,
+    "longitude": -88.0404,
+    "elevation": 245.4
+  },
+  {
+    "id": "-",
+    "name": "ANTIOCH/GREAT_LAKES",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.4665,
+    "longitude": -88.1328,
+    "elevation": 224.7
+  },
+  {
+    "id": "-",
+    "name": "ARLINGTON HEIGHTS/NORTHWEST_COMMUNITY_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0677,
+    "longitude": -87.9935,
+    "elevation": 231.1
+  },
+  {
+    "id": "-",
+    "name": "AURORA/AMITA_HEALTH_MERCY_MEDICAL_CENTER/AURORA",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7858,
+    "longitude": -88.3245,
+    "elevation": 213.4
+  },
+  {
+    "id": "-",
+    "name": "AURORA/RUSH-COPLEY_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7286,
+    "longitude": -88.2716,
+    "elevation": 213.4
+  },
+  {
+    "id": "-",
+    "name": "BARRINGTON/ADVOCATE_GOOD_SHEPHERD_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.1958,
+    "longitude": -88.1717,
+    "elevation": 241.8
+  },
+  {
+    "id": "-",
+    "name": "BARTLETT/URSO",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9997,
+    "longitude": -88.2054,
+    "elevation": 239.3
+  },
+  {
+    "id": "-",
+    "name": "BOLINGBROOK/BOLINGBROOK'S_CLOW_INTL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6959,
+    "longitude": -88.1295,
+    "elevation": 205.8
+  },
+  {
+    "id": "-",
+    "name": "BOLINGBROOK/ADVENTIST_BOLINGBROOK_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6809,
+    "longitude": -88.0863,
+    "elevation": 210.1
+  },
+  {
+    "id": "-",
+    "name": "MAYWOOD/LOYOLA_UNIVERSITY_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8611,
+    "longitude": -87.8365,
+    "elevation": 192.7
+  },
+  {
+    "id": "-",
+    "name": "BULL VALLEY/OAK_LANDING",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.3,
+    "longitude": -88.3806,
+    "elevation": 265.2
+  },
+  {
+    "id": "KUGN",
+    "name": "CHICAGO/WAUKEGAN/WAUKEGAN_NTL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.4221,
+    "longitude": -87.8679,
+    "elevation": 222.0
+  },
+  {
+    "id": "KLOT",
+    "name": "CHICAGO/ROMEOVILLE/LEWIS_UNIVERSITY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6081,
+    "longitude": -88.0964,
+    "elevation": 207.0
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/PRESENCE_RESURRECTION_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9863,
+    "longitude": -87.815,
+    "elevation": 202.1
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/CHICAGO_POLICE_MARINE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8881,
+    "longitude": -87.6097,
+    "elevation": 178.0
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/FIRST_AREA_POLICE_HDQTRS",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8,
+    "longitude": -87.6278,
+    "elevation": 182.9
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/PRESENCE_STS_MARY_AND_ELIZABETH_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9027,
+    "longitude": -87.6826,
+    "elevation": 182.0
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/VERTIPORT_CHICAGO",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8621,
+    "longitude": -87.6703,
+    "elevation": 179.9
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/WGN-TV",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9483,
+    "longitude": -87.6933,
+    "elevation": 180.2
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/THE_UNIVERSITY_OF_CHICAGO_MEDICINE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.791,
+    "longitude": -87.6057,
+    "elevation": 253.0
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/JOHN_H_STROGER_HOSPITAL_OF_COOK_COUNTY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8748,
+    "longitude": -87.6734,
+    "elevation": 180.8
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/TINLEY PARK/TINLEY_PARK_HELISTOP",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5592,
+    "longitude": -87.8058,
+    "elevation": 231.7
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/CHICAGO_FIRE_DEPT_AIR_SEA_RESCUE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7244,
+    "longitude": -87.5264,
+    "elevation": 182.3
+  },
+  {
+    "id": "KMDW",
+    "name": "CHICAGO/CHICAGO_MIDWAY_INTL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.786,
+    "longitude": -87.7524,
+    "elevation": 189.0
+  },
+  {
+    "id": "KORD",
+    "name": "CHICAGO/CHICAGO_O'HARE_INTL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9769,
+    "longitude": -87.9081,
+    "elevation": 207.3
+  },
+  {
+    "id": "KPWK",
+    "name": "CHICAGO/PROSPECT HEIGHTS/WHEELING/CHICAGO_EXEC",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.1143,
+    "longitude": -87.9015,
+    "elevation": 197.3
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/LAKE IN THE HILLS/LAKE_IN_THE_HILLS",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2068,
+    "longitude": -88.323,
+    "elevation": 270.5
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/LURIE_CHILDRENS_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8965,
+    "longitude": -87.6215,
+    "elevation": 311.0
+  },
+  {
+    "id": "KDPA",
+    "name": "CHICAGO/WEST CHICAGO/DUPAGE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9071,
+    "longitude": -88.248,
+    "elevation": 231.2
+  },
+  {
+    "id": "KIGQ",
+    "name": "CHICAGO/LANSING_MUNI",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5349,
+    "longitude": -87.5295,
+    "elevation": 188.9
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/OAK LAWN//ADVOCATE_CHRIST_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7232,
+    "longitude": -87.7328,
+    "elevation": 204.0
+  },
+  {
+    "id": "K06C",
+    "name": "CHICAGO/SCHAUMBURG/SCHAUMBURG_RGNL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9893,
+    "longitude": -88.1012,
+    "elevation": 244.2
+  },
+  {
+    "id": "-",
+    "name": "CHICAGO/SCHAUMBURG/SCHAUMBURG_MUNI_HELISTOP",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0481,
+    "longitude": -88.0526,
+    "elevation": 222.6
+  },
+  {
+    "id": "-",
+    "name": "CRYSTAL LAKE/JACKSON",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2367,
+    "longitude": -88.3523,
+    "elevation": 271.3
+  },
+  {
+    "id": "-",
+    "name": "CRYSTAL LAKE/CRYSTAL_LAKE_HOLIDAY_INN",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2206,
+    "longitude": -88.2848,
+    "elevation": 277.1
+  },
+  {
+    "id": "-",
+    "name": "DES PLAINES/PRESENCE_HOLY_FAMILY_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.055,
+    "longitude": -87.8915,
+    "elevation": 198.2
+  },
+  {
+    "id": "-",
+    "name": "DOWNERS GROVE/ADVOCATE_GOOD_SAMARITAN_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8189,
+    "longitude": -88.0078,
+    "elevation": 235.4
+  },
+  {
+    "id": "-",
+    "name": "DOWNERS GROVE/BROOKERIDGE_AIR_PARK",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7328,
+    "longitude": -87.9994,
+    "elevation": 228.5
+  },
+  {
+    "id": "-",
+    "name": "ELGIN/IL_DEPT_OF_TRANSPORTATION",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0206,
+    "longitude": -88.2829,
+    "elevation": 222.6
+  },
+  {
+    "id": "-",
+    "name": "ELGIN/PRESENCE_ST_JOSEPH_HOSPITAL_-_ELGIN",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0366,
+    "longitude": -88.3264,
+    "elevation": 257.9
+  },
+  {
+    "id": "-",
+    "name": "ELGIN/ADVOCATE_SHERMAN_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0722,
+    "longitude": -88.3297,
+    "elevation": 275.9
+  },
+  {
+    "id": "-",
+    "name": "ELK GROVE VILLAGE/AMITA_HEALTH-ALEXIAN_BROTHERS_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0047,
+    "longitude": -88.0179,
+    "elevation": 215.5
+  },
+  {
+    "id": "-",
+    "name": "ELMHURST/ELMHURST_MEML_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8646,
+    "longitude": -87.937,
+    "elevation": 205.5
+  },
+  {
+    "id": "-",
+    "name": "FOX LAKE/PRECISION_CHROME",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.3897,
+    "longitude": -88.1815,
+    "elevation": 227.1
+  },
+  {
+    "id": "-",
+    "name": "FOX LAKE/ARROW",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.4034,
+    "longitude": -88.1876,
+    "elevation": 225.0
+  },
+  {
+    "id": "-",
+    "name": "GENEVA/NORTHWESTERN_MEDICINE_DELNOR_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8873,
+    "longitude": -88.3447,
+    "elevation": 234.8
+  },
+  {
+    "id": "-",
+    "name": "GILBERTS/KOPPIE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.1214,
+    "longitude": -88.3781,
+    "elevation": 271.3
+  },
+  {
+    "id": "-",
+    "name": "GLENDALE HEIGHTS/ADVENTIST_GLENOAKS_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9144,
+    "longitude": -88.0556,
+    "elevation": 223.8
+  },
+  {
+    "id": "-",
+    "name": "GLENVIEW/ENDEAVOR_HEALTH_CLINICAL_OPERAT_GLENBROOK_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0935,
+    "longitude": -87.8528,
+    "elevation": 205.8
+  },
+  {
+    "id": "-",
+    "name": "GRAYSLAKE/CAMPBELL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.3246,
+    "longitude": -88.0741,
+    "elevation": 240.2
+  },
+  {
+    "id": "-",
+    "name": "GRAYSLAKE/NW_LAKE_FOREST_HOSPITAL-GRAYSLAKE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.3377,
+    "longitude": -88.009,
+    "elevation": 250.9
+  },
+  {
+    "id": "-",
+    "name": "GREENWOOD/WONDER LAKE/GALT_FLD",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.4029,
+    "longitude": -88.3751,
+    "elevation": 266.8
+  },
+  {
+    "id": "-",
+    "name": "HARVEY/UCHICAGO_MEDICINE_INGALLS_MEML",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6057,
+    "longitude": -87.66,
+    "elevation": 195.1
+  },
+  {
+    "id": "-",
+    "name": "HARVEY/HARVEY_POLICE_DEPARTMENT",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6122,
+    "longitude": -87.67,
+    "elevation": 184.5
+  },
+  {
+    "id": "-",
+    "name": "HAZEL CREST/ADVOCATE_SOUTH_SUBURBAN_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5677,
+    "longitude": -87.6972,
+    "elevation": 202.7
+  },
+  {
+    "id": "-",
+    "name": "HIGHLAND PARK/CITY_OF_HIGHLAND_PARK",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.1989,
+    "longitude": -87.8267,
+    "elevation": 195.1
+  },
+  {
+    "id": "-",
+    "name": "HINSDALE/ADVENTIST_HINSDALE_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8053,
+    "longitude": -87.9216,
+    "elevation": 221.0
+  },
+  {
+    "id": "-",
+    "name": "HOFFMAN ESTATES/ST_ALEXIUS_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0543,
+    "longitude": -88.1395,
+    "elevation": 280.5
+  },
+  {
+    "id": "-",
+    "name": "HUNTLEY/CENTEGRA_HOSPITAL-HUNTLEY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.1774,
+    "longitude": -88.3989,
+    "elevation": 272.0
+  },
+  {
+    "id": "-",
+    "name": "HUNTLEY/LANDINGS_CONDOMINIUM",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.1432,
+    "longitude": -88.4033,
+    "elevation": 270.7
+  },
+  {
+    "id": "-",
+    "name": "JOLIET/CHICAGOLAND_SPEEDWAY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.4797,
+    "longitude": -88.0583,
+    "elevation": 198.2
+  },
+  {
+    "id": "KJOT",
+    "name": "JOLIET/JOLIET_RGNL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5177,
+    "longitude": -88.1754,
+    "elevation": 177.5
+  },
+  {
+    "id": "-",
+    "name": "JOLIET/PROVENA_ST_JOSEPH_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5291,
+    "longitude": -88.1371,
+    "elevation": 195.4
+  },
+  {
+    "id": "-",
+    "name": "LA GRANGE/AMITA_HEALTH_MEDICAL_CENTER_LA_GRANGE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.797,
+    "longitude": -87.8873,
+    "elevation": 213.4
+  },
+  {
+    "id": "-",
+    "name": "LAKE FOREST/NORTHWESTERN_LAKE_FOREST_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2542,
+    "longitude": -87.8635,
+    "elevation": 207.3
+  },
+  {
+    "id": "-",
+    "name": "LEMONT/LEMONT_FIRE_DEPT",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6723,
+    "longitude": -88.0042,
+    "elevation": 179.9
+  },
+  {
+    "id": "-",
+    "name": "LIBERTYVILLE/ADVOCATE_CONDELL_MEDICAL_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2746,
+    "longitude": -87.9573,
+    "elevation": 232.3
+  },
+  {
+    "id": "-",
+    "name": "LINDENHURST/VISTA_SURGERY_CENTER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.413,
+    "longitude": -88.0567,
+    "elevation": 246.6
+  },
+  {
+    "id": "-",
+    "name": "MC HENRY/DUTCH_CREEK",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.3711,
+    "longitude": -88.247,
+    "elevation": 224.7
+  },
+  {
+    "id": "-",
+    "name": "MC HENRY/NORTHWESTERN_MEDICINE_HOSPITAL_MCHENRY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.3168,
+    "longitude": -88.2803,
+    "elevation": 248.5
+  },
+  {
+    "id": "-",
+    "name": "MELROSE PARK/GOTTLIEB",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9114,
+    "longitude": -87.8439,
+    "elevation": 209.8
+  },
+  {
+    "id": "-",
+    "name": "MELROSE PARK/HENRY_VALVE_COMPANY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9086,
+    "longitude": -87.8736,
+    "elevation": 195.1
+  },
+  {
+    "id": "-",
+    "name": "MINOOKA/WILSON",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5392,
+    "longitude": -88.3249,
+    "elevation": 181.4
+  },
+  {
+    "id": "-",
+    "name": "MINOOKA/BUSHBY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5167,
+    "longitude": -88.2667,
+    "elevation": 176.8
+  },
+  {
+    "id": "-",
+    "name": "MONTGOMERY/CATERPILLAR_AURORA",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.717,
+    "longitude": -88.3592,
+    "elevation": 201.2
+  },
+  {
+    "id": "-",
+    "name": "MORTON GROVE/CROWN_POINT_CORPORATION",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0243,
+    "longitude": -87.7812,
+    "elevation": 190.2
+  },
+  {
+    "id": "-",
+    "name": "MUNDELEIN/AIR_ESTATES_INC",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2806,
+    "longitude": -88.0945,
+    "elevation": 243.9
+  },
+  {
+    "id": "-",
+    "name": "NAPERVILLE/NAPER_AERO_CLUB",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7363,
+    "longitude": -88.2028,
+    "elevation": 216.2
+  },
+  {
+    "id": "-",
+    "name": "NAPERVILLE/EDWARD_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7605,
+    "longitude": -88.1536,
+    "elevation": 214.0
+  },
+  {
+    "id": "-",
+    "name": "NEW LENOX/SILVER_CROSS_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5456,
+    "longitude": -87.9819,
+    "elevation": 218.6
+  },
+  {
+    "id": "-",
+    "name": "NORTH CHICAGO/ABBVIE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2892,
+    "longitude": -87.8943,
+    "elevation": 208.7
+  },
+  {
+    "id": "-",
+    "name": "OLYMPIA FIELDS/FRANCISCAN_HEALTH_-_OLYMPIA_FIELDS",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.5236,
+    "longitude": -87.7097,
+    "elevation": 218.9
+  },
+  {
+    "id": "-",
+    "name": "PALOS HEIGHTS/PALOS_COMMUNITY_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6692,
+    "longitude": -87.8126,
+    "elevation": 218.6
+  },
+  {
+    "id": "-",
+    "name": "PARK RIDGE/ADVOCATE_LUTHERAN_GENERAL_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0382,
+    "longitude": -87.8478,
+    "elevation": 245.4
+  },
+  {
+    "id": "-",
+    "name": "PLAINFIELD/RUFFATTO_FLD",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.6042,
+    "longitude": -88.2737,
+    "elevation": 202.1
+  },
+  {
+    "id": "-",
+    "name": "ROLLING MEADOWS/STEEL_SUPPLY",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0586,
+    "longitude": -88.0176,
+    "elevation": 213.4
+  },
+  {
+    "id": "-",
+    "name": "ROSELLE/CLARKE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.9864,
+    "longitude": -88.1012,
+    "elevation": 245.4
+  },
+  {
+    "id": "-",
+    "name": "SOUTH ELGIN/TURNER",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.0075,
+    "longitude": -88.2867,
+    "elevation": 213.4
+  },
+  {
+    "id": "-",
+    "name": "SPRING GROVE/PILLOW_HILL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.4472,
+    "longitude": -88.2015,
+    "elevation": 248.5
+  },
+  {
+    "id": "-",
+    "name": "WARRENVILLE/CORNERSTONE",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8103,
+    "longitude": -88.1683,
+    "elevation": 235.7
+  },
+  {
+    "id": "-",
+    "name": "WAUKEGAN/VISTA_MEDICAL_CENTER-EAST",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.3777,
+    "longitude": -87.8334,
+    "elevation": 190.2
+  },
+  {
+    "id": "-",
+    "name": "WILLOWBROOK/MIDWEST_MEML",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.7489,
+    "longitude": -87.9351,
+    "elevation": 216.5
+  },
+  {
+    "id": "-",
+    "name": "WINFIELD/CENTRAL_DUPAGE_HOSPITAL",
+    "state": "IL",
+    "country": "US",
+    "latitude": 41.8725,
+    "longitude": -88.1579,
+    "elevation": 224.1
+  },
+  {
+    "id": "-",
+    "name": "WOODSTOCK/CENTEGRA_HOSPITAL-WOODSTOCK",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.2762,
+    "longitude": -88.4027,
+    "elevation": 286.6
+  },
+  {
+    "id": "-",
+    "name": "ZION/HERBERT_C_MAAS",
+    "state": "IL",
+    "country": "US",
+    "latitude": 42.4722,
+    "longitude": -87.9084,
+    "elevation": 219.2
+  },
+  {
+    "id": "-",
+    "name": "DYER/FRANCISCAN_HEALTH_DYER",
+    "state": "IN",
+    "country": "US",
+    "latitude": 41.4933,
+    "longitude": -87.5236,
+    "elevation": 221.6
+  },
+  {
+    "id": "KGYY",
+    "name": "GARY/GARY/CHICAGO_INTL",
+    "state": "IN",
+    "country": "US",
+    "latitude": 41.6172,
+    "longitude": -87.4145,
+    "elevation": 182.0
+  },
+  {
+    "id": "-",
+    "name": "HAMMOND/ESCC",
+    "state": "IN",
+    "country": "US",
+    "latitude": 41.5942,
+    "longitude": -87.4914,
+    "elevation": 182.9
+  },
+  {
+    "id": "-",
+    "name": "HAMMOND/FRANCISCAN_HEALTH_HAMMOND",
+    "state": "IN",
+    "country": "US",
+    "latitude": 41.6142,
+    "longitude": -87.5241,
+    "elevation": 190.2
+  },
+  {
+    "id": "-",
+    "name": "MUNSTER/COMMUNITY_HOSPITAL",
+    "state": "IN",
+    "country": "US",
+    "latitude": 41.5496,
+    "longitude": -87.5067,
+    "elevation": 187.8
+  },
+  {
+    "id": "-",
+    "name": "MUNSTER/FRANCISCAN_HEALTH_MUNSTER",
+    "state": "IN",
+    "country": "US",
+    "latitude": 41.5383,
+    "longitude": -87.5144,
+    "elevation": 188.1
+  }
+]
