@@ -1,5 +1,9 @@
 # Fabrick Coding Challenge Task 2 - Airports and stations
 
+<div align="center">
+  <img src="https://aviationweather.gov/img/NWS_logo.svg" alt="aviation weather logo" style="max-height: 300px;">
+</div>
+
 This project is a REST API providing an endpoint to retrieve closest observation stations given an airport and closest airports given an observation station. The project uses the [Aviation Weather Center Open API](https://aviationweather.gov/data/api/) to retrieve the data. The API is a Spring Boot and Java 22 application development project. The project also includes unit testing of the service layer using JUnit and Mockito. The project uses Redis as a cache to reduce the number of requests to the [Aviation Weather Center Open API](https://aviationweather.gov/data/api/#/Data/dataStationInfo).
 
 ## Configuration
@@ -7,6 +11,13 @@ This project is a REST API providing an endpoint to retrieve closest observation
 - **Java 22**
 - **Apache Maven 3.9.6**
 - **Redis Stack** running on localhost:6379 (default configuration) (Docker is recommended)
+- 
+## Test
+
+- In order to test remember to start the Redis Stack server
+- a Postman collection is provided at the following path:
+  
+  ```http\Task 2.postman_collection.json```
 
 ### Redis docker image configuration
 
